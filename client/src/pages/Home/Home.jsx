@@ -1,14 +1,15 @@
-import React from 'react'
-import Cards from '../../components/Cards/Cards'
+import React from "react";
+import Cards from "../../components/Cards/Cards";
 
 const Home = () => {
   return (
-    <div className='flex space-x-1 justify-center items-stretch '>
-      <Cards/>
-      <Cards/>
-      <Cards/>
+    <div>
+      <div>
+        <Cards />
+      </div>
+    
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
