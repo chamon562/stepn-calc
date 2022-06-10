@@ -5,6 +5,9 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About"
 import { Routes, Route } from "react-router-dom";
+// can use DataProvider to provide to any of these components
+import {DataProvider} from './context/DataContext'
+
 
 function App() {
   return (
