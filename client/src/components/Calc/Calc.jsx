@@ -32,7 +32,7 @@ const Calc = () => {
             text-lg
             font-medium 
             text-gray-700 
-            hover:bg-gray-50 
+            hover:bg-gray-200 
             focus:outline-none 
             focus:ring-offest-2 
             focus:ring-offset-gray-100 
@@ -149,8 +149,8 @@ const Calc = () => {
             </Menu.Items>
           </Transition>
         </Menu>
-        <div className="bg-red-500">
-          <div className="flex justify-center items-center">
+        <div className="bg-red-500 w-[80%]">
+          <div className="flex justify-evenly ">
             <div className="relative hover:scale-125 w-32 ease-in-out duration-200 cursor-pointer">
               <img
                 className="bg-green-400 border rounded-md  shadow-lg mt-4 "
