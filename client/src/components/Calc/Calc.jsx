@@ -149,7 +149,7 @@ const Calc = () => {
             </Menu.Items>
           </Transition>
         </Menu>
-        <div className="bg-red-500 w-[80%]">
+        <div className=" w-[80%]">
           <div className="flex justify-evenly ">
             <div className="relative hover:scale-125 w-32 ease-in-out duration-200 cursor-pointer">
               <img
