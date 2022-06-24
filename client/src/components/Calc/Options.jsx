@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 
 const Options = ({ rarity }) => {
-    console.log(rarity);
+  console.log(rarity);
+  // shoe level
+  const [level, setLevel] = useState(0);
+
   // adding efficiency
   const [efficiency, setEfficiency] = useState(0);
   const [efPoints, setEfPoints] = useState(0);
@@ -41,107 +44,91 @@ const Options = ({ rarity }) => {
   ]);
 
   return (
-    <div className="flex  p-10  w-full ">
-      <form className="bg-white shadow-md p-5 rounded w-[50%] ">
-        <div className="flex border-b-2 justify-between ">
+    <div className="p-10  w-full ">
+      <form class="w-full h-full max-w-sm">
+        <div className="mb-5 font-medium text-xl">
+          <label className=" ">Level</label>
+          <input
+            type="number"
+            placeholder="1-30"
+            onChange={(e) => setLevel(e.target.value)}
+            className="ml-2 w-10 outline-none "
+            mid="1"
+            max="30"
+            value={level}
+          />
+          <label className="">
+            Points left <span>6</span>{" "}
+          </label>
+        </div>
+        <div className="flex border-b-2 justify-between">
           <h1>Attributes</h1>
           <h1>Base</h1>
           <h1>Points</h1>
           <h1>Total</h1>
         </div>
-        <div className=" flex justify-between ">
-          <label className=" text-gray-700 text-lg font-bold mb-2">
-            Efficiency
-          </label>
-          <input
-            type="float"
-            placeholder="1-10"
-            onChange={(e) => setEfficiency(e.target.value)}
-            className="w-10 outline-none border-b"
-            mid="1"
-            max="360"
-            value={efficiency}
-          />
-          <input
-            type="int"
-            placeholder="6"
-            onChange={(e) => setEfPoints(e.target.value)}
-            className="w-10 outline-none border-b"
-            mid="1"
-            max="360"
-            value={efPoints}
-          />
-          <h1>{efTotal}</h1>
-        </div>
-        <div className=" flex justify-between ">
-          <label className=" text-gray-700 text-lg font-bold mb-2">Luck</label>
-          <input
-            type="float"
-            placeholder="1-10"
-            onChange={(e) => setLuck(e.target.value)}
-            className="w-10 outline-none border-b"
-            mid="1"
-            max="360"
-            value={luck}
-          />
-          <input
-            type="int"
-            placeholder="6"
-            onChange={(e) => setLuckPoints(e.target.value)}
-            className="w-10 outline-none border-b"
-            mid="1"
-            max="360"
-            value={luckPoints}
-          />
-          <h1>{luckTotal}</h1>
-        </div>
-        <div className=" flex justify-between ">
-          <label className=" text-gray-700 text-lg font-bold mb-2">
-            Comfort
-          </label>
-          <input
-            type="float"
-            placeholder="1-10"
-            onChange={(e) => setComfort(e.target.value)}
-            className="w-10 outline-none border-b"
-            mid="1"
-            max="360"
-            value={comfort}
-          />
-          <input
-            type="int"
-            placeholder="6"
-            onChange={(e) => setComfortPoints(e.target.value)}
-            className="w-10 outline-none border-b"
-            mid="1"
-            max="360"
-            value={comfortPoints}
-          />
-          <h1>{comfortTotal}</h1>
-        </div>
-        <div className=" flex justify-between ">
-          <label className=" text-gray-700 text-lg font-bold mb-2">
-            Resilience
-          </label>
-          <input
-            type="float"
-            placeholder="1-10"
-            onChange={(e) => setResilience(e.target.value)}
-            className="w-10 outline-none border-b"
-            mid="1"
-            max="360"
-            value={resilience}
-          />
-          <input
-            type="int"
-            placeholder="6"
-            onChange={(e) => setResiliencePoints(e.target.value)}
-            className="w-10 outline-none border-b"
-            mid="1"
-            max="360"
-            value={resiliencePoints}
-          />
-          <h1>{resilienceTotal}</h1>
+        <div class="grid grid-cols-1 mb-2 gap-2 ">
+          <div class="row-span-1 col-span-2 ">
+            <label class="text-gray-500 font-bold mr-16 ">Efficiency</label>
+            <input
+              class="bg-white appearance-none border-2 mr-6 border-gray-100 rounded w-20 py-1 px-1 text-black-200 leading-tight focus:outline-none focus:bg-white "
+              type="number"
+              placeholder="1-10"
+            />
+            <input
+              class="bg-white appearance-none border-2 mr-6 border-gray-100 rounded w-20 py-1 px-1 text-black-200 leading-tight focus:outline-none focus:bg-white "
+              type="number"
+              placeholder="1-10"
+            />
+
+            <label> 10</label>
+          </div>
+          <div class="row-span-1 col-span-2">
+            <label class="text-gray-500 font-bold mr-16">Luck</label>
+            <input
+              class="bg-white appearance-none border-2 mr-6 border-gray-100 rounded w-20 py-1 px-1 text-black-200 leading-tight focus:outline-none focus:bg-white "
+              type="number"
+              placeholder="1-10"
+            />
+            <input
+              class="bg-white appearance-none border-2 mr-6 border-gray-100 rounded w-20 py-1 px-1 text-black-200 leading-tight focus:outline-none focus:bg-white "
+              type="number"
+              placeholder="1-10"
+            />
+
+            <label> 10</label>
+          </div>
+          <div class="row-span-1 col-span-2">
+            <label class="text-gray-500 font-bold mr-16">Comfort</label>
+            <input
+              class="bg-white appearance-none border-2 mr-6 border-gray-100 rounded w-20 py-1 px-1 text-black-200 leading-tight focus:outline-none focus:bg-white "
+              type="number"
+              placeholder="1-10"
+            />
+            <input
+              class="bg-white appearance-none border-2 mr-6 border-gray-100 rounded w-20 py-1 px-1 text-black-200 leading-tight focus:outline-none focus:bg-white "
+              type="number"
+              placeholder="1-10"
+            />
+
+            <label> 10</label>
+          </div>
+          <div class="row-span-1 col-span-2">
+            <label class="text-gray-500 font-bold mr-16">Resilience</label>
+            <input
+              class="bg-white appearance-none border-2 mr-6 border-gray-100 rounded w-20 py-1 px-1 text-black-200 leading-tight focus:outline-none focus:bg-white "
+              type="number"
+              placeholder="1-10"
+            />
+            <input
+              class="bg-white appearance-none border-2 mr-6 border-gray-100 rounded w-20 py-1 px-1 text-black-200 leading-tight focus:outline-none focus:bg-white "
+              type="number"
+              placeholder="1-10"
+            />
+
+            <label> 10</label>
+          </div>
+          
         </div>
       </form>
     </div>
